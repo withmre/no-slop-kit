@@ -31,7 +31,7 @@ EN = {
     "before_label": "Before", "after_label": "After",
     "count": "markers: {n}", "final": "{n} markers → 0",
     "kept": "Every idea kept. Form rewritten.",
-    "flag": "Flagged for the author: “measurable growth” comes with no figure.",
+    "flag": "Flagged for the author: the growth claim comes with no figure.",
     "segments": [
         ("In today's fast-paced digital landscape,", 1, "generic opener, banned word"),
         ("building a website is", None, None),
@@ -56,9 +56,9 @@ EN = {
         ("It's not just a tool. It's a", 13, "“it's not X, it's Y” again"),
         ("game-changer.", 14, "banned word"),
     ],
-    "after": "Building a website takes more than code: people have to enjoy using it. "
-             "Our platform helps startups and large companies launch sooner. "
-             "Customers stay happier, and the growth shows up in your numbers.",
+    "after": "Building a website also means making it pleasant for the people who use it. "
+             "Our platform helps startups and large companies launch sooner, "
+             "keep their customers happier and grow in a way they can measure.",
 }
 
 FR = {
@@ -87,8 +87,8 @@ FR = {
         ("de croissance.", None, None),
     ],
     "after": "Un site web doit aussi être agréable à utiliser. "
-             "Notre solution aide les freelances comme les grandes entreprises à se faire connaître. "
-             "Vous gagnez des clients et du temps. Votre activité grandit, et vous travaillez plus sereinement.",
+             "Notre solution aide les freelances comme les grandes entreprises à se faire connaître\u00a0: "
+             "vous y gagnez des clients, du temps et de la sérénité, et votre activité grandit.",
 }
 
 F_TEXT = font(SERIF, 31)

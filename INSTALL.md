@@ -17,11 +17,11 @@ Do not modify any project repository. Only the global folder.
 4. Skills: copy each folder of `claude-home/skills/` into `~/.claude/skills/`, with all its files (some skills have more than one). If a skill folder with the same name exists, ask before replacing it.
 5. `settings.json`
    - None exists: copy `claude-home/settings.json`.
-   - One exists: never overwrite it. Add only the entries of `permissions.deny` that are missing, keep everything else untouched, and check the result is valid JSON.
+   - One exists: never overwrite it. Add only the entries of `permissions.deny` and `permissions.ask` that are missing. If `permissions.deny` contains an entry that the kit lists under `permissions.ask` (older versions of this kit denied `rm -rf` and forced pushes), move it to `ask`. Keep everything else untouched, and check the result is valid JSON.
 6. Verify:
    - List every installed file with its path.
    - Check that `settings.json` parses as JSON.
    - Check that each `SKILL.md` starts with a frontmatter block containing `name` and `description`.
 7. Tell the user, in their language and in a few lines: what was installed, where the backup is, and to open a new session and type `/` to see `security`, `reliability`, `ui-design`, `deslop` and `project-setup` listed, then run `/context` to check the global CLAUDE.md is loaded.
 
-The unzipped kit folder can be deleted afterwards. Say so, but don't delete it yourself.
+The kit folder (cloned or unzipped) can be deleted afterwards. Say so, but don't delete it yourself.

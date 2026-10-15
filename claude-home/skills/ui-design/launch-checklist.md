@@ -37,11 +37,11 @@ Report in three lists: done, missing, needs information from me. Never invent co
 
 ## Mobile and interaction
 
-- Real mobile breakpoints, tested at 375 px wide, not just a shrunk desktop. Also checked around 768 px and on a wide screen. No horizontal scroll. Checked on a real iPhone with Safari, where layouts break most.
+- Real mobile breakpoints, tested at 320, 375, 414 and 768 px and on a wide screen. No horizontal scroll, no button label on two lines. Checked on a real iPhone with Safari, where layouts break most.
 - Touch targets at least 44 px.
 - Inputs with the right `type` and `autocomplete`. Mobile menu works.
 - Hover and focus states on everything clickable, none on the rest.
-- A sticky action button on mobile when the page is long.
+- On long mobile pages, the main action stays reachable (slim sticky button, or the action repeated).
 - Loading states and skeletons. Buttons disabled while submitting.
 - Empty states.
 
@@ -65,7 +65,7 @@ Report in three lists: done, missing, needs information from me. Never invent co
 - Real mentions légales: publisher identity, SIRET or RCS number, address, publication director, host name and address.
 - A real privacy policy, filled in and matching what the site actually collects (forms, analytics, cookies): purposes, retention, rights, contact.
 - Real CGV if the site sells, CGU if there are user accounts. Not a template.
-- Cookie banner with « Refuser » as easy as « Accepter », no tracker set before consent, and a footer link to change the choice later.
+- Cookie banner with « Refuser » as easy as « Accepter », no tracker set before consent, and a footer link to change the choice later.
 - Users with accounts can delete their account and get their data (RGPD), from the interface or by a documented request.
 - If the site sells to consumers, check whether the European Accessibility Act applies (in force since June 2025, micro-enterprises exempt).
 
@@ -84,4 +84,4 @@ Report in three lists: done, missing, needs information from me. Never invent co
 
 - No fake testimonial, counter or invented figure. Every number on the site has a source.
 - Real photos or none.
-- Reflex audit from the skill done, with every remaining pattern justified.
+- Tells audit from the skill done (`tells.md`), with every remaining part 2 pattern justified in `DESIGN.md`.

@@ -10,7 +10,7 @@ Global rules and five skills for Claude Code. With them, Claude writes less code
 
 ## Why I made this
 
-I build websites with AI every day. It saves me hours. It also kept handing me the same things: em dashes everywhere, "it's not X, it's Y", purple gradients, three feature cards with an icon on top, fake testimonials, a package that doesn't exist, a 400-line rewrite for a one-line fix.
+I build websites with AI every day, and it saves me hours. It also kept handing me the same things: em dashes everywhere, "it's not X, it's Y", purple gradients, three feature cards with an icon on top, fake testimonials, a package that doesn't exist, a 400-line rewrite for a one-line fix.
 
 I'm against slop for one reason. AI should give us time back to spend on ideas and creative work. Slop does the opposite: it lets us stop thinking, and every site and every paragraph starts to look like the next one.
 
@@ -26,21 +26,21 @@ Here is what `/deslop` does to a typical AI-written paragraph. The animation at 
 
 **After**
 
-> Building a website takes more than code: people have to enjoy using it. Our platform helps startups and large companies launch sooner. Customers stay happier, and the growth shows up in your numbers.
+> Building a website also means making it pleasant for the people who use it. Our platform helps startups and large companies launch sooner, keep their customers happier and grow in a way they can measure.
 
-**What the skill reported**
+**The skill's report: "What I removed"**
 
 | Before | After | Why |
 |---|---|---|
 | "In today's fast-paced digital landscape" | cut | Generic opener that fits any text, and "landscape" is banned |
-| "—" | ":" | Em dash, always removed |
-| "no longer just about code, it's about" | "takes more than code" | "It's not X, it's Y" construction |
+| "—" | sentence rebuilt | Em dash, always removed |
+| "no longer just about code, it's about", "It's not just a tool. It's a game-changer." | "also means", and the second one cut | "It's not X, it's Y", twice. The second adds no idea |
 | "seamless", "truly", "resonate", "cutting-edge", "empowers", "unlock your full potential", "game-changer" | removed | Banned vocabulary and empty intensifiers |
 | "Whether you're a startup or an enterprise" | "startups and large companies" | Stock opener |
-| "The result? Faster launches, happier customers, and measurable growth." | two plain sentences | Question answered right away, and a reflex group of three |
-| "It's not just a tool. It's a game-changer." | cut | Same construction again, and it adds no idea |
+| "The result?" | cut | Question answered right away |
+| "Faster launches, happier customers, and measurable growth." | the three results kept, inside one sentence | Verbless group of three used as a punchline |
 
-Flagged and left for the author: "measurable growth" comes with no figure. Add a real one or drop the claim.
+Left as is and flagged for the author: the growth claim comes with no figure. Add a real one or drop it.
 
 Markers: 14 before, 0 after.
 
@@ -48,14 +48,22 @@ Every idea of the original survived. The skill changes the form, keeps the autho
 
 This README went through the same skill before publication.
 
+## Same brief, with and without the kit
+
+![Animation: three pages built with the default patterns of AI-generated sites, each wiped away to reveal the version built with the ui-design skill, which then plays its own animation and scrolls to the bottom](assets/web-before-after.gif)
+
+Three basic briefs: a landing page for an invoicing app, a neighborhood bakery, a designer's portfolio. Each one is shown twice. The first version reproduces the defaults the `ui-design` skill targets, the ones you get when nothing steers the model: purple gradients, centered heroes, emoji icons, invented numbers. The second follows the skill, starting from a brief with a real-world reference: the carbon-copy receipt book for the invoicing app, the painted shopfronts of old Lyon for the bakery, a research notebook annotated in blue pencil for the portfolio. Each gets its own structure, its own palette and its own pair of fonts, and its one animation shows something true about the product: the invoice gets stamped as paid, the oven times show what comes out next, the annotations explain the designer's method.
+
+All six pages are plain HTML in [`assets/src/pages`](assets/src/pages). Open them and compare the code. Fonts are self-hosted under the SIL Open Font License. Brands, people and prices are fictional.
+
 ## What's inside
 
 | File | What it does | When it loads |
 |---|---|---|
 | `CLAUDE.md` | Global rules: never invent, lazy development, token economy, security baseline, writing style | Every session |
-| `settings.json` | Blocks reading `.env` files, lockfiles and build folders, and a few destructive commands | Every session |
-| `skills/deslop` | Rewrites a text to remove AI tells, with French and English catalogues, and shows what it removed and why | On text meant for publication, or `/deslop` |
-| `skills/ui-design` | Trust killers, dark patterns, default design reflexes, typography, color, tokens, components, launch checklist | On any UI work, or `/ui-design` |
+| `settings.json` | Stops Claude's file tools from reading `.env` files, lockfiles and build folders, and asks before a few destructive commands | Every session |
+| `skills/deslop` | Review mode rewrites a text and shows what it removed and why. Writing mode applies the same rules silently. French and English catalogues | On text meant for publication, or `/deslop` |
+| `skills/ui-design` | Brief and page structure, a catalogue of tells, layout, color, type, tokens, mobile floor, components, a scored self-check, an audit mode and a launch checklist | On any UI work, or `/ui-design` |
 | `skills/security` | 19 sections from secrets to webhooks and payments, plus a pre-release audit with concrete commands | On auth, data, API or payment work, or `/security` |
 | `skills/reliability` | Rate limits, API cost caps, timeouts, empty and error states, indexes, caching, monitoring, backups that restore | On data, API and deployment work |
 | `skills/project-setup` | Writes a project's `CLAUDE.md` from the files in the repository, with nothing invented | Only with `/project-setup` |
@@ -66,7 +74,7 @@ This README went through the same skill before publication.
 
 Claude checks the installed version of a library before using its API, and checks that a package exists before installing it, since a hallucinated package name can belong to a malicious package. It cites `file:line` when it talks about your code. Before writing anything it walks down a ladder: delete, reuse, native platform feature, standard library, installed dependency. New code comes last. The diff stays as small as possible, with no bonus refactor, and Claude never claims it tested something it didn't run.
 
-"Lazy" in this kit means lazy about code: the less Claude writes, the less you have to review. It never means lazy about thinking.
+"Lazy" in this kit means lazy about code: the less Claude writes, the less you have to review. The thinking stays with you.
 
 ### Tokens
 
@@ -74,7 +82,9 @@ Claude searches before reading, skips lockfiles and build output, runs one test 
 
 ### Design
 
-Before any code, Claude writes a short brief with a real-world reference and proposes two directions. It drops its own first instinct for fonts and colors, because that instinct is the same on every project. Before showing a page, it audits every default pattern it used and marks each one "chosen, because..." or removes it.
+For a new site or a redesign, Claude writes a short brief with a real-world reference before any code, and proposes two directions when nothing is set. It picks a page structure for the content (a letter, an index, the product shown first) instead of the hero, three features, call to action rhythm. It drops its own first instinct for fonts and colors, because that instinct is the same on every project, and saves the decisions in a `DESIGN.md` so later pages stay consistent.
+
+Before showing a page, it scores itself on intent, hierarchy, execution, specificity, restraint and variety, and revises anything under 3. Then it lists every default pattern still on the page and marks each one "chosen, because..." or removes it. `/ui-design audit` runs the same checks on an existing site and returns a ranked list without touching the code.
 
 ### Text
 
@@ -82,7 +92,7 @@ No em dashes, no "it's not X, it's Y", no "delve", no rhetorical question answer
 
 ### Security and reliability
 
-Server-side checks on every route, row-level security on every table, prices computed on the server, orders fulfilled on a verified webhook, timeouts on every outbound call, and backups someone has restored at least once.
+Server-side checks on every route, row-level security on every table, prices computed on the server, orders fulfilled on a verified webhook, timeouts on every outbound call, and backups that get a real restore test.
 
 ## Install
 
@@ -107,11 +117,11 @@ Claude backs up your current configuration, asks before replacing anything, merg
 ```bash
 mkdir -p ~/.claude/skills
 cp -r claude-home/skills/* ~/.claude/skills/
-cp -n claude-home/CLAUDE.md ~/.claude/CLAUDE.md
-cp -n claude-home/settings.json ~/.claude/settings.json
+[ -e ~/.claude/CLAUDE.md ] || cp claude-home/CLAUDE.md ~/.claude/
+[ -e ~/.claude/settings.json ] || cp claude-home/settings.json ~/.claude/
 ```
 
-`cp -n` leaves your existing `CLAUDE.md` and `settings.json` alone: merge them by hand if you already have some. The skills copy overwrites skills with the same names.
+The last two lines copy `CLAUDE.md` and `settings.json` only if you don't have them yet. If you do, merge them by hand. The skills copy overwrites skills with the same names.
 
 Open a new session, type `/` to see the skills, and run `/context` to check the rules are loaded.
 
@@ -120,13 +130,13 @@ Open a new session, type `/` to see the skills, and run `/context` to check the 
 Most of the time you do nothing. Claude loads each skill when the task calls for it. You can also call them directly:
 
 - `/deslop` followed by your text, or a path to a file.
-- `/ui-design` before starting a page or a redesign.
-- `/security` for an audit before a release.
+- `/ui-design` before starting a page or a redesign, `/ui-design audit` on an existing site.
+- `/security` for an audit before a release, `/reliability` to check limits, errors and backups.
 - `/project-setup` once in each new repository.
 
 ## Make it yours
 
-Claude replies in French by default. To change that, edit the line "Always reply in French" in `CLAUDE.md`. Section 8 of the same file holds the French writing rules, and the deslop skill already ships an English catalogue.
+Claude replies in English by default. The kit is shared publicly and its instructions are written in English, so English is the default that works for the most people and costs the fewest tokens. To change it, edit the line "Reply in English by default" in `CLAUDE.md`, for example to "Always reply in French." Section 8 of the same file holds the writing rules, with French and English examples, and the deslop skill ships a catalogue for each language.
 
 Banned words live in `skills/deslop/fr.md` and `skills/deslop/en.md`. Add yours.
 
@@ -156,10 +166,14 @@ Details in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 If the kit saved you a rewrite, a star helps other people find it.
 
+## Thanks
+
+Two open-source skills sharpened this kit: [Hallmark](https://github.com/nutlope/hallmark), for the idea of structural variety, the scored self-check and many precise design tells, and [anti-ai-slop-writing](https://github.com/jalaalrd/founder-toolkit), for the rules on parataxis, the hedging seesaw and writing without inventing. Their ideas are rewritten here in this kit's own words and adapted to its rules. Both are MIT-licensed and worth a look.
+
 ## Star history
 
 [![Star history chart](https://api.star-history.com/svg?repos=withmre/no-slop-kit&type=Date)](https://star-history.com/#withmre/no-slop-kit&Date)
 
 ## License
 
-[MIT](LICENSE). Use it, fork it, change it.
+[MIT](LICENSE). Use it and change it as you like.

@@ -31,7 +31,7 @@ Short-output version of each command, to save context.
 
 ## Design
 
-- [Brand palette and fonts, or a link to the design system. Leave empty until the brief is approved, then fill it so every page stays consistent.]
+- Design decisions live in `DESIGN.md` (written by the `ui-design` skill once the brief is approved). Read it before any UI work.
 
 ## Operations
 

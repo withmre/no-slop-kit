@@ -5,6 +5,8 @@
       "Read(.env.local)",
       "Read(.env.development)",
       "Read(.env.production)",
+      "Read(.env.test)",
+      "Read(.env.staging)",
       "Read(.env.development.local)",
       "Read(.env.production.local)",
       "Read(./secrets/**)",
@@ -16,10 +18,24 @@
       "Read(./build/**)",
       "Read(./.next/**)",
       "Read(./coverage/**)",
+      "Read(**/.env)",
+      "Read(**/.env.local)",
+      "Read(**/.env.development)",
+      "Read(**/.env.production)",
+      "Read(**/.env.test)",
+      "Read(**/.env.staging)",
+      "Read(**/.env.development.local)",
+      "Read(**/.env.production.local)",
+      "Read(./.output/**)"
+    ],
+    "ask": [
       "Bash(git push --force *)",
       "Bash(git push -f *)",
       "Bash(git reset --hard *)",
-      "Bash(rm -rf *)"
+      "Bash(rm -rf *)",
+      "Bash(rm -fr *)",
+      "Bash(git push * --force*)",
+      "Bash(git push * -f *)"
     ]
   }
 }

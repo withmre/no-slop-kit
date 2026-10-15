@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inès Morel, product designer in Lyon</title>
+<meta name="description" content="Inès Morel turns paper forms and front-desk queues into online services people finish. Selected work, method and contact.">
+<meta name="theme-color" content="#121212">
+<!--
+Brief. Reference: a designer's research notebook, with photocopied forms annotated in non-photo blue pencil.
+Structure: a letter. One claim, one annotated artifact that shows the method, then the work and how to reach her.
+Palette: cool paper, near-black ink, non-photo blue as the only accent (annotations, underlines).
+Fonts: Young Serif for display, Hanken Grotesk for text.
+-->
+<style>
+@font-face{font-family:"Young Serif";src:url(fonts/young-serif-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Hanken Grotesk";src:url(fonts/hanken-grotesk-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Hanken Grotesk";src:url(fonts/hanken-grotesk-latin-500-normal.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Hanken Grotesk";src:url(fonts/hanken-grotesk-latin-600-normal.woff2) format("woff2");font-weight:600;font-display:swap}
+:root{
+  --paper:#f3f3ef;--sheet:#fbfbf8;--ink:#121212;--muted:#5b5b57;--rule:#d6d6d0;--pencil:#4fb0d6;--pencil-ink:#1d6a8a;--pencil-tint:#d6edf6;
+  --display:"Young Serif",Georgia,serif;--text:"Hanken Grotesk",system-ui,sans-serif;
+  --step--1:.875rem;--step-0:1.0625rem;--step-1:1.25rem;--step-2:1.625rem;--step-3:2.25rem;--step-display:clamp(2.75rem,4.2vw + 1rem,4.75rem);
+  --space-0:.25rem;--space-1:.5rem;--space-2:1rem;--space-3:1.5rem;--space-4:2.5rem;--space-5:4rem;--space-6:6rem;--gutter:clamp(1.25rem,5vw,4.5rem);
+}
+*{box-sizing:border-box;margin:0}
+html,body{overflow-x:clip}
+body{font-family:var(--text);font-size:var(--step-0);line-height:1.55;background:var(--paper);color:var(--ink)}
+::selection{background:var(--pencil-tint)}
+a{color:inherit;text-decoration-color:var(--pencil);text-decoration-thickness:2px;text-underline-offset:4px}
+a:hover{text-decoration-thickness:4px}
+a:focus-visible{outline:2px solid var(--pencil-ink);outline-offset:3px}
+
+header{display:flex;flex-wrap:wrap;gap:var(--space-1) var(--space-3);justify-content:space-between;align-items:baseline;padding:var(--space-3) var(--gutter);border-bottom:1px solid var(--rule)}
+.name{font-family:var(--display);font-size:var(--step-1)}
+.meta{color:var(--muted)}
+
+.intro{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--space-5);align-items:center;padding:var(--space-5) var(--gutter) var(--space-6)}
+h1{font-family:var(--display);font-weight:400;font-size:var(--step-display);line-height:1.04;letter-spacing:-.015em;text-wrap:balance;overflow-wrap:anywhere;min-width:0}
+.lede{font-size:var(--step-1);color:var(--muted);margin-top:var(--space-3);max-width:44ch;text-wrap:pretty}
+.lede a{color:var(--ink)}
+
+/* The artifact: a paper form she studied, annotated in non-photo blue. */
+.form{position:relative;background:var(--sheet);border:1px solid var(--rule);padding:var(--space-3);font-size:var(--step--1);transform:rotate(1.2deg)}
+.form figcaption{margin-top:var(--space-2);padding-top:var(--space-1);border-top:1px solid var(--rule);color:var(--pencil-ink);font-size:var(--step--1)}
+.form h2{font-family:var(--text);font-weight:600;font-size:var(--step-0);border-bottom:2px solid var(--ink);padding-bottom:var(--space-0);margin-bottom:var(--space-2)}
+.field{display:grid;grid-template-columns:8.5rem minmax(0,1fr);gap:var(--space-1);align-items:end;margin-bottom:var(--space-2)}
+.field i{display:block;border-bottom:1px solid var(--muted);height:1.1rem}
+.boxes{display:flex;gap:var(--space-2);margin:var(--space-1) 0 var(--space-2)}
+.boxes span::before{content:"";display:inline-block;width:.8rem;height:.8rem;border:1px solid var(--muted);margin-right:var(--space-0);vertical-align:-1px}
+.notes{position:absolute;top:0;left:0;width:100%;height:23rem;pointer-events:none;overflow:visible}
+.notes path,.notes ellipse{fill:none;stroke:var(--pencil);stroke-width:2.2;stroke-linecap:round;stroke-dasharray:var(--len);stroke-dashoffset:var(--len);animation:draw 700ms ease-out forwards}
+.notes text{font-family:var(--text);font-weight:500;font-size:15px;fill:var(--pencil-ink);opacity:0;animation:show 300ms ease-out forwards}
+.n1{animation-delay:600ms!important}.n2{animation-delay:1300ms!important}.n3{animation-delay:2000ms!important}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes show{to{opacity:1}}
+
+section{padding:var(--space-5) var(--gutter);border-top:1px solid var(--rule)}
+h3{font-family:var(--display);font-weight:400;font-size:var(--step-3);line-height:1.1}
+.work{list-style:none;padding:0;margin-top:var(--space-3)}
+.work li{display:grid;grid-template-columns:5rem minmax(0,4fr) minmax(0,6fr) minmax(0,3fr);gap:var(--space-3);padding:var(--space-3) 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.work .y{color:var(--muted);font-variant-numeric:tabular-nums}
+.work b{font-family:var(--display);font-weight:400;font-size:var(--step-2);line-height:1.15}
+.work .r{color:var(--muted);font-size:var(--step--1)}
+.method{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--space-4);margin-top:var(--space-4);list-style:none;padding:0;counter-reset:step}
+.method li{counter-increment:step;border-top:2px solid var(--ink);padding-top:var(--space-2)}
+.method li::before{content:counter(step);font-family:var(--display);font-size:var(--step-2);display:block;margin-bottom:var(--space-1)}
+.method p{color:var(--muted);margin-top:var(--space-0)}
+.contact{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:var(--space-3)}
+.contact a{font-family:var(--display);font-size:var(--step-display);line-height:1}
+.contact p{color:var(--muted);max-width:32ch}
+footer{padding:var(--space-3) var(--gutter);color:var(--muted);font-size:var(--step--1);border-top:1px solid var(--rule);display:flex;justify-content:space-between;flex-wrap:wrap;gap:var(--space-2)}
+
+@media (max-width:56rem){
+  .intro{grid-template-columns:minmax(0,1fr)}
+  .form{transform:none;margin:var(--space-3) 0}.notes{display:none}
+  .work li{grid-template-columns:minmax(0,1fr);gap:var(--space-0)}
+  .method{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+@media (prefers-reduced-motion:reduce){.notes path,.notes ellipse{animation:none;stroke-dashoffset:0}.notes text{animation:none;opacity:1}}
+</style>
+</head>
+<body>
+<header><span class="name">Inès Morel</span><span class="meta">Product designer in Lyon. Available from January. <a href="/contact">Write to me</a></span></header>
+
+<main>
+  <div class="intro">
+    <div>
+      <h1>I turn paper forms and front-desk queues into online services people finish.</h1>
+      <p class="lede">Most projects start the same way: I sit at the counter for a few days and watch people fill in what already exists. Then I redraw it, test it with five of them, and redraw it again.</p>
+    </div>
+    <figure class="form" aria-label="A library card renewal form, annotated in blue pencil">
+      <h2>Library card renewal</h2>
+      <div class="field"><span>Card number</span><i></i></div>
+      <div class="field"><span>Surname, first name</span><i></i></div>
+      <div class="field"><span>Address</span><i></i></div>
+      <div class="field"><span>Proof of address</span><i></i></div>
+      <div class="boxes"><span>Adult</span><span>Student</span><span>Senior</span></div>
+      <div class="field"><span>Card number (again)</span><i></i></div>
+      <div class="field"><span>Signature</span><i></i></div>
+      <svg class="notes" viewBox="0 0 450 370" preserveAspectRatio="none" aria-hidden="true">
+        <ellipse class="n1" style="--len:300" cx="84" cy="82" rx="68" ry="15"/>
+        <text class="n1" x="236" y="78">nobody has it on them</text>
+        <path class="n2" style="--len:260" d="M20 272 C -8 220, -8 136, 20 90"/>
+        <text class="n2" x="300" y="262">asked twice</text>
+        <path class="n3" style="--len:200" d="M440 204 L 330 204 M 330 204 l 10 -7 M 330 204 l 10 7"/>
+        <text class="n3" x="318" y="192">people stop here</text>
+      </svg>
+      <figcaption>Notes from the counter: nobody has the card number on them, it is asked twice, and people stop at the proof of address.</figcaption>
+    </figure>
+  </div>
+
+  <section>
+    <h3>Selected work</h3>
+    <ul class="work">
+      <li><span class="y">2026</span><b>Médiathèque des Pentes</b><span>Card renewal moved online. The form above became four questions.</span><span class="r">Research, design. 4 months</span></li>
+      <li><span class="y">2025</span><b>Atelier Sorel</b><span>Booking and paying for pottery classes, replacing a shared spreadsheet.</span><span class="r">Design. 3 months</span></li>
+      <li><span class="y">2024</span><b>Coop Grand Champ</b><span>A member portal that replaced the monthly email and its replies.</span><span class="r">Research, design. 5 months</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>How a project goes</h3>
+    <ol class="method">
+      <li><strong>Watch</strong><p>A few days where the service happens today, with the paper and the queue.</p></li>
+      <li><strong>Redraw</strong><p>The fewest questions that still get the job done, sketched on paper first.</p></li>
+      <li><strong>Test with five people</strong><p>Five sessions find most of the problems. Then I fix and test again.</p></li>
+      <li><strong>Hand over</strong><p>Specs your developers can build from, and I stay reachable during the build.</p></li>
+    </ol>
+  </section>
+
+  <section class="contact">
+    <a href="/contact">Write to me</a>
+    <p>For projects of three months or more, from January. I answer within two working days.</p>
+  </section>
+</main>
+<footer><span>Inès Morel, Lyon</span><a href="/legal">Legal notice</a></footer>
+</body>
+</html>

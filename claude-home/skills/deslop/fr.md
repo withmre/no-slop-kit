@@ -2,92 +2,99 @@
 
 ## Ponctuation et typographie
 
-- Tiret cadratin ou demi-cadratin comme ponctuation (absolu). Remplacer par une virgule, un point, des parenthèses, ou reconstruire la phrase.
-- Deux-points en série : « Le résultat : », « Le constat est simple : », « Mon conseil : ». Un ou deux par texte, pas un par paragraphe.
-- Majuscules à l'anglaise dans les titres (« Comment Créer Un Site Qui Convertit »). En français, seul le premier mot et les noms propres prennent une majuscule.
-- Guillemets droits "..." ou anglais “...” dans un texte français. Utiliser « ... » avec espaces insécables à l'intérieur.
+- Tiret cadratin ou demi-cadratin comme ponctuation (absolu). Remplacer par une virgule, un point, des parenthèses, ou reconstruire la phrase. Un deux-points seulement s'il annonce la suite.
+- Deux-points en série : « Le résultat : », « Le constat est simple : », « Mon conseil : ». Un ou deux par texte, pas un par paragraphe.
+- Majuscules à l'anglaise dans les titres (« Comment Créer Un Site Qui Convertit »). En français, seul le premier mot et les noms propres prennent une majuscule.
+- Guillemets droits "…" ou anglais “…” dans un texte français. Utiliser « … » avec espaces insécables à l'intérieur.
 - Espace manquante avant `:` `;` `!` `?` (espace insécable, fine pour `; ! ?` si le support le permet).
-- Majuscules non accentuées (« A partir de », « Etat »). Écrire À, É, Ç.
+- Majuscules non accentuées (« A partir de », « Etat »). Écrire À, É, Ç.
 - Trois points `...` au lieu du caractère `…`, et points de suspension pour créer du suspense.
 - Points d'exclamation en série, ou un par paragraphe.
-- Nombres à l'anglaise : « 1,000 », « 20% », « 3.5 ». Écrire « 1 000 », « 20 % », « 3,5 ».
+- Nombres à l'anglaise : « 1,000 », « 20% », « 3.5 ». Écrire « 1 000 », « 20 % », « 3,5 ».
 - Gras décoratif, ou un mot en gras par phrase. Garder le gras pour un terme que le lecteur doit repérer.
 - Emoji (absolu sauf demande), y compris en début de puce.
 - Listes à puces là où un paragraphe se lit mieux. Titres sur un texte court.
-- Puces construites sur le modèle « **Terme** : explication » à chaque ligne.
+- Puces construites sur le modèle « **Terme** : explication » à chaque ligne.
 
 ## Constructions
 
-- « Ce n'est pas X, c'est Y » (absolu) et ses variantes : « plus qu'un X, un Y », « loin d'être X », « il ne s'agit pas de X, mais de Y », « non pas X, mais Y », « au-delà de X, Y », « X ? Non. Y. », « X, pas Y » en chute de phrase.
-- Le triple refus : « Pas de X. Pas de Y. Juste Z. »
-- Question rhétorique suivie de sa réponse : « Le résultat ? Une hausse de 20 %. », « Le problème ? », « La bonne nouvelle ? », « Spoiler : ».
-- Groupes de trois par réflexe : adjectifs, noms, propositions, puces. Ramener à deux, ou garder quatre si chacun porte du sens.
+- « Ce n'est pas X, c'est Y » (absolu) et ses variantes : « plus qu'un X, un Y », « loin d'être X », « il ne s'agit pas de X, mais de Y », « non pas X, mais Y », « au-delà de X, Y », « X ? Non. Y. », « X, pas Y » en chute de phrase.
+- Le triple refus : « Pas de X. Pas de Y. Juste Z. »
+- Question rhétorique suivie de sa réponse : « Le résultat ? Une hausse de 20 %. », « Le problème ? », « La bonne nouvelle ? », « Spoiler : ».
+- Groupes de trois par réflexe : adjectifs, noms, propositions, puces. Supprimer l'élément faible, fusionner, ou garder quatre si chacun porte du sens. Varier : tout ramener à deux crée un autre tic.
 - Phrases miroirs et antithèses alignées les unes après les autres.
-- Fragments en rafale pour faire percutant : « Simple. Rapide. Efficace. »
+- Fragments en rafale pour faire percutant : « Simple. Rapide. Efficace. »
+- Parataxe : trois phrases courtes ou plus qui s'enchaînent sans lien, chacune isolée. Relier les idées comme on le fait en parlant : parce que, mais, donc, ce qui, une subordonnée, un point-virgule.
+- La balance prudente : une affirmation, son contraire présenté à égalité (« D'un côté… de l'autre… »), puis un entre-deux mou. Prendre position et donner l'objection en une phrase au plus.
 - Une phrase par ligne, avec une ligne vide entre chaque (style LinkedIn).
-- Ouvertures : « Et si... », « Imaginez... », « Dans un monde où... », « À l'heure où... », « Que vous soyez X ou Y... », « Vous êtes-vous déjà demandé... ».
-- Annonces : « Dans cet article, nous allons voir », « Voici pourquoi : », « Voici X conseils pour », « Décortiquons ».
-- Énumération balisée : « Premièrement, Deuxièmement, Enfin » sur un texte court.
-- Transitions creuses : « Et c'est là que X entre en jeu », « C'est là que tout change », « Mais ce n'est pas tout ».
-- Définitions en ouverture : « X, c'est avant tout Y. »
-- Phrase finale qui répète le paragraphe : « En somme », « En définitive », « Au final », « Bref », « Vous l'aurez compris ».
-- Chute inspirante : « L'avenir appartient à ceux qui... », « Le meilleur moment pour commencer, c'est maintenant ».
-- Appel à l'engagement en fin de post : « Et vous, qu'en pensez-vous ? », « Dites-le-moi en commentaire », « N'hésitez pas à ».
-- Tous les paragraphes construits pareil : affirmation, explication, exemple, chute.
+- Ouvertures : « Et si… », « Imaginez… », « Dans un monde où… », « À l'heure où… », « Que vous soyez X ou Y… », « Vous êtes-vous déjà demandé… », « Lorsqu'il s'agit de… », « Du freelance à la grande entreprise » (fourchette « de X à Y » en ouverture).
+- Ouvertures de paragraphe toutes faites : « Dans l'ensemble, », « Il est intéressant de noter que », « Fait notable, », « En substance, ».
+- Annonces : « Dans cet article, nous allons voir », « Voici pourquoi : », « Voici X conseils pour », « Décortiquons », « Sans plus attendre », « Accrochez-vous ».
+- Énumération balisée : « Premièrement, Deuxièmement, Enfin » sur un texte court.
+- Transitions creuses : « Et c'est là que X entre en jeu », « C'est là que tout change », « Mais ce n'est pas tout ».
+- Définitions en ouverture : « X, c'est avant tout Y. »
+- Phrase finale qui répète le paragraphe : « En somme », « En définitive », « Au final », « Bref », « Vous l'aurez compris », « En un mot », « Le mot de la fin ».
+- Chute inspirante : « L'avenir appartient à ceux qui… », « Le meilleur moment pour commencer, c'est maintenant ».
+- Appel à l'engagement en fin de post : « Et vous, qu'en pensez-vous ? », « Dites-le-moi en commentaire », « N'hésitez pas à ».
+- Tous les paragraphes construits pareil : affirmation, explication, exemple, chute.
 
 ## Précautions et remplissage
 
-- Précautions : « il est possible que », « cela pourrait potentiellement », « dans certains cas », « dans une certaine mesure », « il semblerait que ». Affirmer, ou supprimer la phrase.
-- Connecteurs vides : « il est important de noter », « il convient de noter », « force est de constater », « il va sans dire », « en effet » en début de phrase, « concrètement » sans rien de concret ensuite, « de plus », « par ailleurs », « en outre » en série.
-- Intensifs qui affaiblissent : « véritable », « réellement », « vraiment », « totalement », « absolument », « littéralement », « profondément ».
-- Superlatifs sans preuve : « incroyable », « fascinant », « exceptionnel », « unique ».
-- Généralités qui iraient dans n'importe quel texte : « Dans un monde en constante évolution », « À l'ère du numérique ». Supprimer, ou remplacer par un exemple concret que l'auteur a déjà donné. Ne jamais en inventer.
+- Précautions : « il est possible que », « cela pourrait potentiellement », « dans certains cas », « dans une certaine mesure », « il semblerait que ». Affirmer simplement, sans formule choc, ou supprimer la phrase.
+- Connecteurs vides : « il est important de noter », « il convient de noter », « force est de constater », « il va sans dire », « en effet » en début de phrase, « concrètement » sans rien de concret ensuite, « de plus », « par ailleurs », « en outre » en série.
+- Intensifs qui affaiblissent : « véritable », « réellement », « vraiment », « totalement », « absolument », « littéralement », « profondément ».
+- Superlatifs sans preuve : « incroyable », « fascinant », « exceptionnel », « unique ».
+- Généralités qui iraient dans n'importe quel texte : « Dans un monde en constante évolution », « À l'ère du numérique ». Supprimer, ou remplacer par un exemple concret que l'auteur a déjà donné. Ne jamais en inventer.
 
 ## Vocabulaire banni
 
-explorons, plongeons, plonger dans, il convient de noter, paysage (figuré), écosystème (figuré), robuste, transformer (figuré), révolutionner, révolutionnaire, crucial, essentiel, incontournable, booster, levier, au cœur de, à l'ère de, naviguer (figuré), fluide, sans couture, de pointe, puissant, innovant, synergie, voyage (figuré), déverrouiller, libérer le potentiel, faire la différence, changer la donne, game-changer, valeur ajoutée, optimiser (sans objet précis), favoriser, tisser des liens, delve.
+explorons, plongeons, plonger dans, il convient de noter, souligner, mettre en lumière, mettre en avant, renforcer (figuré), sans précédent, remarquable, époustouflant, profond (figuré), multiples facettes, en substance, passer à la vitesse supérieure, combler le fossé, faire bouger les lignes, aller de l'avant, soyez assuré, paysage (figuré), écosystème (figuré), robuste, transformer (figuré), révolutionner, révolutionnaire, crucial, essentiel, incontournable, booster, levier, au cœur de, à l'ère de, naviguer (figuré), fluide, sans couture, de pointe, puissant, innovant, synergie, voyage (figuré), déverrouiller, libérer le potentiel, faire la différence, changer la donne, game-changer, valeur ajoutée, optimiser (sans objet précis), favoriser, tisser des liens, delve.
 
 ## Calques de l'anglais
 
 Les traductions mot à mot trahissent un texte pensé en anglais.
 
-- « faire du sens » : avoir du sens
-- « adresser un problème » : traiter, régler
-- « impacter » : toucher, affecter, avoir un effet sur
-- « définitivement » au sens de certainement : sans aucun doute, à coup sûr
-- « réaliser » au sens de comprendre : se rendre compte
-- « opportunité » au sens d'occasion : occasion
-- « délivrer » de la valeur, un projet : livrer, apporter
-- « initier » un projet : lancer
-- « consistant » au sens de cohérent : cohérent, régulier
-- « éventuellement » au sens de finalement : finalement, à terme
-- « supporter » au sens de soutenir : soutenir, prendre en charge
-- « être en charge de » : être chargé de, s'occuper de
-- « dans le futur » : à l'avenir
-- « à la fin de la journée » : au bout du compte
-- « digital » pour numérique (sauf si c'est le choix de l'auteur)
+- « faire du sens » : avoir du sens
+- « adresser un problème » : traiter, régler
+- « impacter » : toucher, affecter, avoir un effet sur
+- « définitivement » au sens de certainement : sans aucun doute, à coup sûr
+- « réaliser » au sens de comprendre : se rendre compte
+- « opportunité » au sens d'occasion : occasion
+- « délivrer » de la valeur, un projet : livrer, apporter
+- « initier » un projet : lancer
+- « consistant » au sens de cohérent : cohérent, régulier
+- « éventuellement » au sens de finalement : finalement, à terme
+- « supporter » au sens de soutenir : soutenir, prendre en charge
+- « être en charge de » : être chargé de, s'occuper de
+- « dans le futur » : à l'avenir
+- « à la fin de la journée » : au bout du compte
+- « digital » pour numérique (sauf si c'est le choix de l'auteur)
+- « points de douleur » : problèmes, difficultés, ce qui bloque
+- « proposition de valeur » dans un texte grand public : ce que ça vous apporte
+- « revenir vers vous » à chaque email : vous répondre, vous recontacter
 
 ## Rythme
 
 - Phrases toutes de même longueur, paragraphes tous de même taille. Une phrase courte après une longue. Un paragraphe d'une ligne de temps en temps.
-- Phrase impossible à dire à voix haute d'un trait : la couper.
-- Chaînes de noms (« la mise en place de la réalisation de ») : revenir au verbe.
+- Phrase impossible à dire à voix haute d'un trait : la couper.
+- Chaînes de noms (« la mise en place de la réalisation de ») : revenir au verbe.
 - Voix passive quand on sait qui agit.
 
 ## Ton
 
 - Flatterie du lecteur, enthousiasme forcé.
-- Fausse proximité : « Entre nous », « Je vais être honnête avec vous ».
+- Adjectifs de remplissage dans un texte commercial : puissant, intuitif, fluide, simple, innovant. Montrer ce que le produit fait à la place.
+- Fausse proximité : « Entre nous », « Je vais être honnête avec vous ».
 - Ton de manuel quand le canal est une conversation (email, message).
-- Mélange de tu et de vous dans le même texte : le signaler, garder celui de l'auteur.
+- Mélange de tu et de vous dans le même texte : le signaler, garder celui de l'auteur.
 
 ## Résidus de génération (absolu)
 
-« Voici une version révisée », « Bien sûr ! », « Excellente question », « J'espère que cela vous aide », « En tant qu'IA », crochets à remplir (`[Votre nom]`, `[Insérer]`), astérisques ou dièses Markdown dans un email ou un message en texte brut.
+« Voici une version révisée », « Bien sûr ! », « Excellente question », « J'espère que cela vous aide », « En tant qu'IA », crochets à remplir (`[Votre nom]`, `[Insérer]`, sauf le marqueur `[À FOURNIR : ...]` du kit, qui reste et se signale), astérisques ou dièses Markdown dans un email ou un message en texte brut.
 
 ## Selon le canal
 
-- Site : le titre dit ce que fait le produit, les boutons nomment l'action, aucun adjectif de remplissage.
-- Email : une idée par paragraphe, la demande dans les deux premières lignes, pas de formule de clôture empilée.
-- LinkedIn : pas de phrase d'accroche suivie d'une ligne vide, pas d'une phrase par ligne, pas de liste à flèches, pas d'appel à commenter.
-- README : ce que fait le projet, comment l'installer, comment le lancer. Pas de marketing.
+- Site : le titre dit ce que fait le produit, les boutons nomment l'action, aucun adjectif de remplissage.
+- Email : une idée par paragraphe, la demande dans les deux premières lignes, pas de formule de clôture empilée. Pas de « J'espère que vous allez bien » ni de « N'hésitez pas à revenir vers moi » par réflexe. Pas de titres ni de gras.
+- LinkedIn et réseaux : pas de phrase d'accroche suivie d'une ligne vide, pas d'une phrase par ligne, pas de liste à flèches, pas d'appel à commenter, pas de « Thread : » ni de 🧵, deux hashtags au plus, intégrés.
+- README : ce que fait le projet, comment l'installer, comment le lancer. Pas de marketing.

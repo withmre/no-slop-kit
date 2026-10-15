@@ -5,7 +5,7 @@ description: Reliability, performance and cost rules for any web project. Use wh
 
 # Reliability
 
-A site that works on your machine with three test rows is not ready. Plan for slow networks, failing APIs, empty tables, impatient users, bots and growth. Apply the items relevant to the task. Lazy still applies: add a mechanism when the need exists, not "for later". At the end, one line: items checked, items left.
+A site that works on your machine with three test rows is not ready. Plan for slow networks, failing APIs, empty tables, impatient users, bots and growth. Apply the items relevant to the task. Lazy still applies: add a mechanism when the need exists. At the end, one line: items checked, items left.
 
 ## 1. Limits and costs
 
@@ -29,7 +29,7 @@ A site that works on your machine with three test rows is not ready. Plan for sl
 For every component that loads data, handle each case explicitly:
 
 - Loading: a skeleton shaped like the content, or a spinner for short actions.
-- Empty: what would be here and the next action (« Aucun devis pour l'instant. Créer un devis »).
+- Empty: what would be here and the next action (« Aucun devis pour l'instant. Créer un devis »).
 - Error: section 2.
 - Partial: some items failed, the rest still shows.
 - Success.
@@ -47,7 +47,7 @@ Submissions: button disabled and showing progress while sending, so double click
 ## 5. Indexes
 
 - Index columns used in frequent `WHERE`, `JOIN` and `ORDER BY` clauses. Postgres does not index foreign keys automatically: index the ones you join or filter on.
-- Unique constraints for what must be unique (email, slug, idempotency key). The DB enforces it, not the app.
+- Unique constraints for what must be unique (email, slug, idempotency key). Let the database enforce it.
 - Text search: a proper index (trigram or full-text), never `LIKE '%term%'` on a large table.
 - Check a slow query with `EXPLAIN ANALYZE` before and after. Don't add indexes blindly: each one slows writes.
 
@@ -78,7 +78,7 @@ Submissions: button disabled and showing progress while sending, so double click
 
 - Automatic backups of the database and of user files (storage buckets are often forgotten), daily at least, with a defined retention.
 - Stored separately from production: another account, another region or another provider.
-- Restore tested for real before launch and at least once a quarter: restore into a scratch database, check row counts and a few records. A backup never restored is a hope. Write the restore procedure in the project's CLAUDE.md.
+- Restore tested for real before launch and at least once a quarter: restore into a scratch database, check row counts and a few records. Write the restore procedure in the project's CLAUDE.md.
 - Point-in-time recovery enabled when the provider offers it and the data justifies it.
 - Backup taken before any risky migration.
 

@@ -2,7 +2,7 @@
 
 Priority when rules conflict: security, then my explicit request, then this file.
 If a request breaks a security rule, say so and propose an alternative instead of doing it.
-Always reply in French. Language of code, comments and commits: see the project's CLAUDE.md.
+Reply in English by default. To use another language, change this line (for example: "Always reply in French."). Language of code, comments and commits: see the project's CLAUDE.md.
 If the current project has no CLAUDE.md, suggest `/project-setup` once.
 
 Load the `security` skill whenever a task touches auth, permissions, the database, an API, payments, a webhook, file uploads, secrets or deployment config. Load `reliability` whenever a task touches data fetching, queries, external APIs, forms, caching, errors, logging or backups. Load `ui-design` whenever a task touches UI: a page, a component, a layout, colors or fonts. Load `deslop` when writing or reviewing text meant for publication: site copy, article, post, email, README.
@@ -47,7 +47,7 @@ Reading
 
 - Search before reading: grep or glob to locate, then read only the relevant range of large files.
 - Don't reread a file you just read or edited unless it may have changed.
-- Never read `.env` (variable names are in `.env.example`), lockfiles, build output (`dist`, `build`, `.next`, `coverage`), minified files, sourcemaps, large logs, generated data.
+- Never read `.env` (variable names are in `.env.example`), lockfiles, build output (`dist`, `build`, `.next`, `coverage`), minified files, sourcemaps, large logs, generated data. One exception: the pre-release security audit greps the built bundle for leaked keys.
 - In `node_modules`, read only the `package.json` or the type definitions of the package you need.
 - Broad codebase searches, more than a handful of files: delegate to the Explore subagent. It returns the conclusion without filling your context.
 - Run independent reads and searches in parallel.
@@ -101,7 +101,7 @@ Replies
 
 Details in the `security` skill.
 
-- No secret in client code or in the repo. The prefixes `NEXT_PUBLIC_`, `VITE_`, `PUBLIC_`, `EXPO_PUBLIC_` and `REACT_APP_` make a variable public.
+- No secret in client code or in the repo. The prefixes `NEXT_PUBLIC_`, `VITE_`, `PUBLIC_`, `NUXT_PUBLIC_`, `EXPO_PUBLIC_` and `REACT_APP_` make a variable public.
 - Service keys stay server-side. The client gets the public key only.
 - Row-level security enabled on every table, with written and tested policies.
 - Auth and permissions checked server-side, on every route and every action. Changing an ID in the URL must give access to nothing.
@@ -110,15 +110,15 @@ Details in the `security` skill.
 - Anything checked only in the browser is not checked. Payment amounts are computed server-side, and orders fulfilled only on a verified webhook.
 - Passwords hashed with argon2id or bcrypt. Session cookies `httpOnly`, `Secure`, `SameSite`.
 
-## 8. Writing in French
+## 8. Writing
 
-Applies to replies, UI copy, docs and commit messages. Not to code. Full catalogue in the `deslop` skill.
+Applies to replies, UI copy, docs and commit messages, in any language. Not to code. Full catalogues (French and English) in the `deslop` skill.
 
-- No em dash or en dash as punctuation. Use a comma, a colon or a period.
-- No « ce n'est pas X, c'est Y » construction, nor its variants (« plus qu'un X, un Y », « X, pas Y »).
+- No em dash or en dash as punctuation. Use a comma, a period or parentheses, or rebuild the sentence.
+- No « ce n'est pas X, c'est Y » / "it's not X, it's Y" construction, nor its variants (« plus qu'un X, un Y », "not just X, but Y", « X, pas Y » as a punchline).
 - No emoji unless asked. Bold for a key term, rarely.
-- No reflexive groups of three. Two is often enough.
-- No stacked hedges (« il est possible que », « cela pourrait potentiellement », « dans certains cas »). Assert, or say you don't know.
+- No reflexive groups of three, and no chains of short disconnected sentences.
+- No stacked hedges (« il est possible que », "may potentially"). Assert, or say you don't know.
 - Don't rephrase my question. No opening or closing pleasantries.
-- Banned words: explorons, plongeons, il convient de noter, paysage (figuré), robuste, transformer (figuré), crucial, incontournable, booster, au cœur de, delve.
+- Banned words, French: explorons, plongeons, il convient de noter, paysage (figuré), robuste, transformer (figuré), crucial, incontournable, booster, au cœur de. English: delve, landscape (figurative), seamless, robust, leverage, unlock, elevate, game-changer.
 - Vary sentence length. Write the way people talk. A paragraph rather than bullets when a paragraph is enough.

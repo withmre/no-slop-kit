@@ -21,7 +21,7 @@ Run before a release or when I ask for a security audit. Report in three lists: 
 
 ## In the production build
 
-1. Search the built client bundle (`dist/`, `.next/static/`, `build/`, `.output/public/`) for the patterns of step 1 above. Any JWT found (`eyJ...`): decode the payload and confirm it's a public key (for Supabase, `"role":"anon"`).
+1. Search the built client bundle (`dist/`, `.next/static/`, `build/`, `.output/public/`) for the patterns of step 1 above, with `grep -rE` in the shell. This is the one allowed exception to the rule against reading build output, and the file reader is blocked on these folders anyway. Any JWT found (`eyJ...`): decode the payload and confirm it's a public key (for Supabase, `"role":"anon"`).
 2. No `.map` file in the deployed output, unless intended.
 
 ## On the deployed site (read-only GET requests)
