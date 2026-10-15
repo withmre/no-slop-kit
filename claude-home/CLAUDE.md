@@ -5,7 +5,7 @@ If a request breaks a security rule, say so and propose an alternative instead o
 Reply in English by default. To use another language, change this line (for example: "Always reply in French."). Language of code, comments and commits: see the project's CLAUDE.md.
 If the current project has no CLAUDE.md, suggest `/project-setup` once.
 
-Load the `security` skill whenever a task touches auth, permissions, the database, an API, payments, a webhook, file uploads, secrets or deployment config. Load `reliability` whenever a task touches data fetching, queries, external APIs, forms, caching, errors, logging or backups. Load `ui-design` whenever a task touches UI: a page, a component, a layout, colors or fonts. Load `deslop` when writing or reviewing text meant for publication: site copy, article, post, email, README.
+Load the `security` skill whenever a task touches auth, permissions, the database, an API, payments, a webhook, file uploads, secrets or deployment config. Load `reliability` whenever a task touches data fetching, queries, external APIs, forms, caching, errors, logging or backups. Load `container-security` whenever a task touches Docker, Compose, Kubernetes, images, networks, exposed ports or runtime secrets. Load `production-readiness` before a public release, a high-traffic event or a cross-cutting production audit. Load `ui-design` whenever a task touches UI: a page, a component, a layout, colors or fonts. Load `deslop` when writing or reviewing text meant for publication: site copy, article, post, email, README.
 
 ## 1. Never invent
 

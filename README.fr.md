@@ -1,6 +1,6 @@
 # No Slop Kit pour Claude Code
 
-Des règles globales et cinq skills pour Claude Code. Avec eux, Claude écrit moins de code, n'invente rien, consomme moins de tokens et arrête de produire les textes et les designs qui font dire « ça, c'est une IA ».
+Des règles globales et sept skills pour Claude Code. Avec eux, Claude écrit moins de code, n'invente rien, consomme moins de tokens et arrête de produire les textes et les designs qui font dire « ça, c'est une IA ».
 
 ![Licence : MIT](https://img.shields.io/badge/license-MIT-blue) ![PR bienvenues](https://img.shields.io/badge/PRs-welcome-brightgreen) ![Claude Code](https://img.shields.io/badge/for-Claude%20Code-d97757) ![Étoiles GitHub](https://img.shields.io/github/stars/withmre/no-slop-kit?style=social)
 
@@ -64,6 +64,8 @@ Les six pages sont en HTML simple dans [`assets/src/pages`](assets/src/pages). O
 | `skills/ui-design` | Brief et structure de page, catalogue des tics, mise en page, couleur, typo, tokens, plancher mobile, composants, auto-évaluation notée, mode audit et checklist de lancement | Sur tout travail d'interface, ou `/ui-design` |
 | `skills/security` | 19 sections, des secrets aux webhooks et aux paiements, plus un audit avant mise en ligne avec des commandes concrètes | Sur l'auth, les données, les API, les paiements, ou `/security` |
 | `skills/reliability` | Limites de requêtes, plafonds d'API, délais d'attente, états vides et d'erreur, index, cache, surveillance, sauvegardes restaurables | Sur les données, les API et le déploiement |
+| `skills/container-security` | Vérifications des images et de l'exécution Docker, Compose et Kubernetes, avec ports, secrets, privilèges et limites de ressources | Sur les conteneurs ou le déploiement |
+| `skills/production-readiness` | Oriente un audit de mise en ligne vers les skills utiles, avec modèle de menace, capacité et rapport partagé P0/P1/P2 | Avant une mise en ligne publique, une forte affluence ou `/production-readiness` |
 | `skills/project-setup` | Écrit le `CLAUDE.md` d'un projet à partir des fichiers du dépôt, sans rien inventer | Seulement avec `/project-setup` |
 
 ## Ce que ça change
@@ -90,7 +92,7 @@ Pas de tiret cadratin, pas de « ce n'est pas X, c'est Y », pas de « plonge
 
 ### Sécurité et fiabilité
 
-Vérifications côté serveur sur chaque route, sécurité au niveau des lignes sur chaque table, prix calculés sur le serveur, commandes validées sur un webhook vérifié, délai d'attente sur chaque appel externe, et des sauvegardes dont la restauration a été testée.
+Vérifications côté serveur sur chaque route, sécurité au niveau des lignes sur chaque table, prix calculés sur le serveur, commandes validées sur un webhook vérifié, délai d'attente sur chaque appel externe, limites explicites pour les conteneurs, et des sauvegardes dont la restauration a été testée. Avant une mise en ligne publique ou une forte affluence, `/production-readiness` rassemble ces vérifications et classe les écarts en P0, P1 et P2.
 
 ## Installer
 
@@ -130,6 +132,7 @@ La plupart du temps, tu n'as rien à faire : Claude charge chaque skill quand l
 - `/deslop` suivi de ton texte, ou du chemin d'un fichier ;
 - `/ui-design` avant de commencer une page ou une refonte, `/ui-design audit` sur un site existant ;
 - `/security` pour un audit avant mise en ligne, `/reliability` pour vérifier limites, erreurs et sauvegardes ;
+- `/container-security` pour Docker, Compose ou Kubernetes, `/production-readiness` avant une mise en ligne publique ou une forte affluence ;
 - `/project-setup` une fois dans chaque nouveau dépôt.
 
 ## L'adapter
@@ -159,7 +162,7 @@ Ce qui aiderait le plus :
 - un catalogue deslop dans ta langue : espagnol, allemand, portugais, italien ;
 - les tics d'IA que tu croises et que les catalogues ratent ;
 - les réflexes de design des dernières galeries de composants ;
-- des vérifications de sécurité ou de fiabilité pour une stack pas encore couverte ;
+- des vérifications de sécurité, de fiabilité ou de conteneurs pour une stack pas encore couverte ;
 - les faux positifs : une règle qui a rendu Claude moins bon. Ils comptent autant que les nouvelles règles.
 
 Le détail est dans [CONTRIBUTING.md](CONTRIBUTING.md).

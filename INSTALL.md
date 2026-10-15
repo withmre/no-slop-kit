@@ -22,6 +22,6 @@ Do not modify any project repository. Only the global folder.
    - List every installed file with its path.
    - Check that `settings.json` parses as JSON.
    - Check that each `SKILL.md` starts with a frontmatter block containing `name` and `description`.
-7. Tell the user, in their language and in a few lines: what was installed, where the backup is, and to open a new session and type `/` to see `security`, `reliability`, `ui-design`, `deslop` and `project-setup` listed, then run `/context` to check the global CLAUDE.md is loaded.
+7. Tell the user, in their language and in a few lines: what was installed, where the backup is, and to open a new session and type `/` to see `security`, `reliability`, `container-security`, `production-readiness`, `ui-design`, `deslop` and `project-setup` listed, then run `/context` to check the global CLAUDE.md is loaded.
 
 The kit folder (cloned or unzipped) can be deleted afterwards. Say so, but don't delete it yourself.

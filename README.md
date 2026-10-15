@@ -1,6 +1,6 @@
 # No Slop Kit for Claude Code
 
-Global rules and five skills for Claude Code. With them, Claude writes less code, invents nothing, spends fewer tokens, and stops producing the text and design that make people think "an AI made this".
+Global rules and seven skills for Claude Code. With them, Claude writes less code, invents nothing, spends fewer tokens, and stops producing the text and design that make people think "an AI made this".
 
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue) ![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen) ![Claude Code](https://img.shields.io/badge/for-Claude%20Code-d97757) ![GitHub stars](https://img.shields.io/github/stars/withmre/no-slop-kit?style=social)
 
@@ -66,6 +66,8 @@ All six pages are plain HTML in [`assets/src/pages`](assets/src/pages). Open the
 | `skills/ui-design` | Brief and page structure, a catalogue of tells, layout, color, type, tokens, mobile floor, components, a scored self-check, an audit mode and a launch checklist | On any UI work, or `/ui-design` |
 | `skills/security` | 19 sections from secrets to webhooks and payments, plus a pre-release audit with concrete commands | On auth, data, API or payment work, or `/security` |
 | `skills/reliability` | Rate limits, API cost caps, timeouts, empty and error states, indexes, caching, monitoring, backups that restore | On data, API and deployment work |
+| `skills/container-security` | Runtime and image checks for Docker, Compose and Kubernetes, including ports, secrets, privileges and resource limits | On container or deployment work |
+| `skills/production-readiness` | Routes a release audit across the relevant skills, with threat modeling, capacity checks and a shared P0/P1/P2 report | Before a public release, high-traffic event or `/production-readiness` |
 | `skills/project-setup` | Writes a project's `CLAUDE.md` from the files in the repository, with nothing invented | Only with `/project-setup` |
 
 ## What changes in practice
@@ -92,7 +94,7 @@ No em dashes, no "it's not X, it's Y", no "delve", no rhetorical question answer
 
 ### Security and reliability
 
-Server-side checks on every route, row-level security on every table, prices computed on the server, orders fulfilled on a verified webhook, timeouts on every outbound call, and backups that get a real restore test.
+Server-side checks on every route, row-level security on every table, prices computed on the server, orders fulfilled on a verified webhook, timeouts on every outbound call, containers with explicit runtime boundaries, and backups that get a real restore test. Before a public release or high-traffic event, `/production-readiness` brings those checks together and reports P0, P1 and P2 findings in one format.
 
 ## Install
 
@@ -132,6 +134,7 @@ Most of the time you do nothing. Claude loads each skill when the task calls for
 - `/deslop` followed by your text, or a path to a file.
 - `/ui-design` before starting a page or a redesign, `/ui-design audit` on an existing site.
 - `/security` for an audit before a release, `/reliability` to check limits, errors and backups.
+- `/container-security` for Docker, Compose or Kubernetes work, `/production-readiness` before a public release or high-traffic event.
 - `/project-setup` once in each new repository.
 
 ## Make it yours
@@ -159,7 +162,7 @@ What would help most:
 - A deslop catalogue for your language: Spanish, German, Portuguese, Italian.
 - AI tells you keep seeing that the catalogues miss.
 - Design reflexes from the latest component galleries.
-- Security or reliability checks for a stack the skills don't cover yet.
+- Security, reliability or container checks for a stack the skills don't cover yet.
 - False positives: a rule that made Claude worse. These matter as much as new rules.
 
 Details in [CONTRIBUTING.md](CONTRIBUTING.md).

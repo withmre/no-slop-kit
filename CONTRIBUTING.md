@@ -5,7 +5,7 @@ Every proposal is welcome. You don't need to open an issue before a pull request
 ## What helps most
 
 - A deslop catalogue for a new language: add `claude-home/skills/deslop/<code>.md` (for example `es.md`), following the structure of `en.md`, and reference it in `deslop/SKILL.md` (section 3 and the `description` line, which names the supported languages).
-- An AI tell, design reflex, security check or reliability check that's missing.
+- An AI tell, design reflex, security, reliability or container check that's missing.
 - A false positive: a rule that made Claude worse. Removing a bad rule is as useful as adding a good one.
 - Support for a stack the skills don't mention yet.
 
